@@ -82,3 +82,126 @@ function CalcularPrecio ()
 	}
 precioTotal = precioLampara - precioLampara*porcentajeDescuento/100
 }
+
+
+//MEJORA CON SWITCH
+cantidadDeLamparas=document.getElementById('Cantidad').value;
+	cantidadDeLamparas=parseInt(cantidadDeLamparas);
+	marca=document.getElementById('Marca').value;
+	precioBruto=cantidadDeLamparas*35;
+	console.info("Bruto: ",precioBruto);
+	descuento=0;
+	switch(cantidadDeLamparas)
+	{
+		case 5:
+				switch(marca)
+				{
+					case "ArgentinaLuz"
+						descuento=40;
+						break;
+					default:
+						descuento=30;
+						break;
+				}
+					case 4:
+							switch(marca)
+							{
+								case "ArgentinaLuz"
+								case "FelipeLamparas"
+									descuento=25;
+									break;
+								default:
+									descuento=20;
+									break;
+							}
+					case 3:
+							switch(marca)
+							{
+								case "ArgentinaLuz"
+									descuento=15;
+									break;
+								case "FelipeLamparas"
+									descuento=10;
+									break;
+								default:
+									descuento=5;
+									break;	
+							}
+						case 1:
+						case 2:
+								descuento=0;
+								break;
+						default:
+									descuento=50;
+									break; 
+	}
+
+
+	
+
+
+
+
+
+
+ 	/*
+	if(cantidadDeLamparas>5)
+	{
+		descuento=50;
+	}
+	else
+	{
+		if(cantidadDeLamparas==5)
+		{
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=40;
+			}
+			else
+			{
+				descuento=30;
+			}
+		}
+		else
+		{
+			if(cantidadDeLamparas==4)
+			{
+				if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+				{
+					descuento=25;
+				}
+				else
+				{
+					descuento=20;
+				}
+			}
+			else
+			{
+				if(cantidadDeLamparas==3)
+				{
+					if(marca=="ArgentinaLuz")
+					{
+						descuento=15;
+					}
+					else
+					{
+						if(marca=="FelipeLamparas")
+						{
+							descuento=10;
+						}
+						else
+						{
+							descuento=5;
+						}
+					}//if(cantidadDeLamparas==3)
+				}
+			}//if(cantidadDeLamparas==4)
+		}//if(cantidadDeLamparas==5)
+	}//if(cantidadDeLamparas>5)
+	
+	*/
+	
+	precioConDescuento=precioBruto-precioBruto*descuento/100;
+	console.info("Precio con descuento: ",precioConDescuento);
+	document.getElementById('precioDescuento').value=precioConDescuento;
+}						
