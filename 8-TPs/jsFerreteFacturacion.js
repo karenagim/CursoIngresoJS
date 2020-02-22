@@ -14,7 +14,7 @@ function Sumar ()
 	segundoPrecio = parseInt(document.getElementById('PrecioDos').value);
 	tercerPrecio  = parseInt(document.getElementById('PrecioTres').value);
 
-	resultadoSuma = primerPrecio + segundoPrecio + tercerPrecio
+	resultadoSuma = primerPrecio + segundoPrecio + tercerPrecio;
 
 	console.log (resultadoSuma);
 	alert(resultadoSuma);
@@ -22,11 +22,6 @@ function Sumar ()
 
 function Promedio () 
 {
-	var primerPrecio;
-	var segundoPrecio;
-	var tercerPrecio;
-	var resultadoSuma;
-
 	primerPrecio  = parseInt(document.getElementById('PrecioUno').value);
 	segundoPrecio = parseInt(document.getElementById('PrecioDos').value);
 	tercerPrecio  = parseInt(document.getElementById('PrecioTres').value);
@@ -38,17 +33,11 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
-	var primerPrecio;
-	var segundoPrecio;
-	var tercerPrecio;
-	var sumatoriaPrecios;
-
 	primerPrecio  = parseInt(document.getElementById('PrecioUno').value);
 	segundoPrecio = parseInt(document.getElementById('PrecioDos').value);
 	tercerPrecio  = parseInt(document.getElementById('PrecioTres').value);
 
 	sumatoriaPrecios = primerPrecio + segundoPrecio + tercerPrecio;
 	alert (sumatoriaPrecios + (sumatoriaPrecios*21/100) )
-
 
 }

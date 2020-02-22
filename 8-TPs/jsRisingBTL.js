@@ -19,6 +19,7 @@ function ComenzarIngreso ()
 	edad= prompt("ingrese una edad valida entre 18y90");
 	sexo=prompt("F o M para indicar el sexo");
 	estadoCivil= prompt("indique su estado Civil 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos");
+	sueldoBruto =prompt("Indique su sueldoBruto no menor a 8000");
 	numeroDeLegajo=prompt("indique su Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.");
 	nacionalidad= prompt("Indique su Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados.");
 
@@ -32,7 +33,7 @@ function ComenzarIngreso ()
 		document.getElementById('Edad').value = edad;
 
 	
-	while( sexo != " f " && sexo != " m ")
+	while( sexo != "f" && sexo != "m")
 	{
 		sexo=prompt("f o m para indicar el sexo");
 	}
@@ -46,22 +47,26 @@ function ComenzarIngreso ()
  	
  		document.getElementById('EstadoCivil').value = estadoCivil;
 
- 	while( Sueldo <7999)
+ 	while( sueldoBruto >8000)
  	{
  		sueldoBruto= prompt("Indique su sueldoBruto no menor a 8000");
  	}
- 		document.getElementById('sueldo')= sueldo;
+ 		document.getElementById('Sueldo')= sueldo;
 
- 	while()
+ 	while(numeroDeLegajo >1000)
  	{
  		numeroDeLegajo=prompt("indique su Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.")
  	}
+ 	document.getElementById('Legajo')= numeroDeLegajo;
 
  	while(nacionalidad != "A" || nacionalidad != "E" || nacionalidad != "N" )
  	{
  		nacionalidad= prompt("Indique su Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados.");
  	}
  		document.getElementById('Nacionalidad')= nacionalidad;
+
+
+
 
 }
 
