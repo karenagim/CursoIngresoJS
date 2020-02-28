@@ -32,7 +32,7 @@ function ComenzarIngreso ()
 	}
 		document.getElementById('Edad').value = edad;
 
-	
+	//!isNan(sexo) || sexo!= "f" &&  sexo!="m")
 	while( sexo != "f" && sexo != "m")
 	{
 		sexo=prompt("f o m para indicar el sexo");
@@ -47,15 +47,15 @@ function ComenzarIngreso ()
  	
  		document.getElementById('EstadoCivil').value = estadoCivil;
 
- 	while( sueldoBruto >8000)
+ 	while( sueldoBruto <8000)
  	{
  		sueldoBruto= prompt("Indique su sueldoBruto no menor a 8000");
  	}
  		document.getElementById('Sueldo')= sueldo;
 
- 	while(numeroDeLegajo >1000)
+ 	while(numeroDeLegajo <1000  || numeroDeLegajo>9999)
  	{
- 		numeroDeLegajo=prompt("indique su Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.")
+ 		numeroDeLegajo=prompt("ERROR - indique su Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.")
  	}
  	document.getElementById('Legajo')= numeroDeLegajo;
 
