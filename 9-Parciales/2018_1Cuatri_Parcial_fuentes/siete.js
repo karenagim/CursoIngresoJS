@@ -22,6 +22,9 @@ function mostrar()
 			sexo = prompt("ERROR -Ingrese f para femenino o m para masculino")
 			
 		}
+
+		notaAlumnoPromedios = notaAlumnoPromedios + notaAlumno
+		
 		if(contadorDeAlumnos ==5)
 		{
 			notaAlumnoPromedios = notaAlumnoPromedios + notaAlumno
