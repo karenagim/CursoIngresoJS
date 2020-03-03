@@ -33,6 +33,7 @@ function mostrar()
 	var contadorQr;
 	var contadorTarjeta;
 	var contadorEfete;
+	var formaDePagoMasUtilizada;
 
 	respuesta= "si"
 	contador=0;	//e2
@@ -45,6 +46,10 @@ function mostrar()
 	while(respuesta=="si")
 	{
 		nombre= prompt("ingrese el nombre Del Huesped");
+		do
+		{
+			nombre=prompt("ingrese el nombre Del Huesped");
+		}while(! isNaN(nombre));
 
 		cantidadDePersonas= prompt("ingrese la cantidad de Huespedes");
 		while(isNaN(cantidadDePersonas)||cantidadDePersonas<1)
@@ -121,14 +126,52 @@ function mostrar()
 					contadorQr++;
 					break;
 		}
-
+		acumulador= acumulador+cantidadDeDias;
 		contador++
 		respuesta= prompt("desea continuar");
 	
 
 
 	}//termina el WHILE
+
+	if(contadorEfete> contadorTarjeta)
+	{
+		if(contadorEfete>contadorQr)
+		{
+			formaDePagoMasUtilizada= "efete";
+		}//INCOMPLETO
+	}
+
+	//FORMA OPTIMIZADA
+	if(contadorEfete ==contadorTarjeta && contadorEfete==contadorQr)
+	{
+		formaDePagoMasUtilizada= "ninguna todas se utilizaron";
+	}
+	else{
+		if(contadorEfete> contadorTarjeta && contadorEfete>contadorQr)
+		{
+			formaDePagoMasUtilizada= "efete";
+		}
+			else
+			{
+				if(contadorQr> contadorTarjeta )
+				{
+					formaDePagoMasUtilizada= "QR";
+				}
+				else
+				{
+					formaDePagoMasUtilizada= "tarjeta";
+				}
+			}
+		}
+	
 	promedio= acumulador/contador
 	console.log(maximoDePersonasNombre);//verificacion 
 	console.log(maximoDeDiasCantidadDePersonas);//verificacion Respuesta 7
+	console.log(formaDePagoMasUtilizada);
+	document.write("<br> nombre del huesped con mas invitados" + maximoDePersonasNombre);//para mostrarlos
+	document.write("<br> la cantidad" + maximoDeDiasCantidadDePersonas);//para mostrarlos
+	document.write("<br> forma de pago mas ultizada" + formaDePagoMasUtilizada);//para mostrarlos
+	document.write("<br> promedio" +promedio);//para mostrarlos
+
 }
