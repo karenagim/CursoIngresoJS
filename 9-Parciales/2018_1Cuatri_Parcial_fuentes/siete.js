@@ -1,36 +1,44 @@
 function mostrar()
 {
-	var nota;
+	var notaAlumno;
+	var sexoAlumno;
+	var promedioNotasTotales;
+	var contadorDeAlumnos;
 	
-
-//a
-	notaAlumno = prompt("Ingrese notaAlumno entre 0 y 10");
-	sexo = prompt("Ingrese f para femenino o m para masculino")
+	
+	contadorDeAlumnos=parseInt(contadorDeAlumnos);
 	contadorDeAlumnos = 0
-	notaAlumnoPromedios =0
 	
-	while(contadorDeAlumnos<5)
-	{
-		
-		while(isNaN(notaAlumno) || notaAlumno<0 || notaAlumno>10 ) //entre 0 y 10
-		{
-			notaAlumno = prompt("ERROR UN VALOR VALIDO-Ingrese notaAlumno entre 0 y 10");
-		
-		}
-		while(!isNaN(sexo) && sexo != "f" && sexo !="m")
-		{
-			sexo = prompt("ERROR -Ingrese f para femenino o m para masculino")
+	promedioNotasTotales= parseInt(promedioNotasTotales);
+	promedioNotasTotales =0
 			
+
+		while(contadorDeAlumnos <5)
+		{	
+			
+			notaAlumno = prompt("Ingrese notaAlumno entre 0 y 10");
+			while (isNaN(notaAlumno) || notaAlumno < 0 || notaAlumno > 10)
+			{
+				notaAlumno = prompt("Ingrese la notaAlumno");
+				notaAlumno= parseInt(notaAlumno);
+			}
+			console.log("La notaAlumno ingresada es: " + notaAlumno);
+
+		/*	sexoAlumno = prompt("Ingrese f para femenino o m para masculino")
+			while(!isNaN(sexoAlumno) || sexoAlumno!= "f" && sexoAlumno !="m")
+			{
+				sexoAlumno = prompt("Ingrese f para femenino o m para masculino")	
+			}
+			console.log("el sexo es " + sexoAlumno);
+*/
+			contadorDeAlumnos= contadorDeAlumnos+1
+			
+			promedioNotasTotales= notaAlumno;
+		
 		}
 
-		notaAlumnoPromedios = notaAlumnoPromedios + notaAlumno
-		
-		if(contadorDeAlumnos ==5)
-		{
-			notaAlumnoPromedios = notaAlumnoPromedios + notaAlumno
-		}
-	contadorDeAlumnos= contadorDeAlumnos+1;
-	
-	}
-	
+		//console.log("el promedio total es " + promedioNotasTotales/contadorDeAlumnos);
+		console.log("cantidad de alumns " + contadorDeAlumnos);
+		console.log("el promedio total es " +  promedioNotasTotales);
 }
+	
